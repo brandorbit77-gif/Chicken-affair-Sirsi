@@ -1,1 +1,140 @@
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Chicken Affair, Sirsi — crispy chicken, burgers, wraps, pizza and cold beverages.">
+  <title>Chicken Affair | Sirsi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#1b1717;--red:#bd1721;--deep:#8e1018;--pale:#fff3f3;--line:#ebcfd1}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:#fff;color:var(--ink);font-family:"DM Sans",sans-serif}
+    .wrap{width:min(1160px,calc(100% - 48px));margin:auto}
+    .hero{min-height:740px;color:#fff;position:relative;isolation:isolate;background:linear-gradient(90deg,rgba(96,4,11,.92),rgba(123,8,17,.62) 46%,rgba(27,6,7,.18)),url("https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=1800&q=88") center/cover}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:170px;background:linear-gradient(transparent,#fff);z-index:-1}
+    .nav{height:94px;display:flex;align-items:center;justify-content:space-between}
+    .brand{color:inherit;text-decoration:none;font-family:"Bebas Neue",sans-serif;font-size:27px;letter-spacing:1px;display:flex;align-items:center;gap:9px}
+    .brand span{font-family:"DM Sans",sans-serif;font-size:13px;font-weight:700;background:#fff;color:var(--red);border-radius:50%;width:34px;height:34px;display:grid;place-items:center}
+    .nav-links{display:flex;align-items:center;gap:30px}
+    .nav-links a{color:#fff;text-decoration:none;font-size:14px;font-weight:600}
+    .nav-order{background:#fff;color:var(--red)!important;padding:12px 18px}
+    .menu-button{display:none;background:none;border:0;color:#fff;font-size:24px}
+    .hero-content{padding-top:132px}
+    .eyebrow{font-size:12px;letter-spacing:2px;font-weight:700;color:var(--red);margin:0 0 16px}
+    .hero .eyebrow{color:#fff}
+    h1,h2,h3{font-family:"Bebas Neue",sans-serif;font-weight:400;letter-spacing:.5px;line-height:.92;margin:0}
+    h1{font-size:clamp(73px,10vw,142px)}
+    h1 em,h2 em{color:#fff;font-style:normal}
+    .hero-copy{width:min(455px,100%);font-size:17px;line-height:1.6;margin:27px 0}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .button{display:inline-flex;gap:25px;align-items:center;padding:15px 20px;font-size:14px;font-weight:700;text-decoration:none;border:1px solid transparent}
+    .primary{background:#fff;color:var(--red)}
+    .ghost{border-color:#fff;color:#fff}
+    .hero-stamp{position:absolute;bottom:33px;right:5%;font-size:11px;letter-spacing:3px}
+    .intro{padding:125px 0;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:end}
+    .intro h2,.section-head h2,.visit h2{font-size:clamp(54px,7vw,88px)}
+    .intro>p{font-size:19px;line-height:1.6;margin:0}
+    .featured{background:var(--pale);padding:95px 0 110px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:42px}
+    .section-head>p{color:#6d5556;margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .food-card{height:370px;padding:28px;display:flex;align-items:end;position:relative;overflow:hidden;background-size:cover;background-position:center;color:#fff}
+    .food-card:before{content:"";position:absolute;inset:0;background:linear-gradient(transparent 20%,rgba(72,0,5,.88))}
+    .food-card>*{position:relative}
+    .wings{background-image:url("https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=900&q=82")}
+    .burger{background-image:url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=82")}
+    .wrap-card{background-image:url("https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=900&q=82")}
+    .card-number{position:absolute!important;top:24px;right:25px;font-family:"Bebas Neue";font-size:22px}
+    .food-card p{font-size:11px;letter-spacing:1.5px;font-weight:700;margin:0 0 9px}
+    .food-card h3{font-size:42px}
+    .food-card span{display:block;font-size:12px;line-height:1.4;margin-top:12px}
+    .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:68px;background:#fff;padding:26px 32px}
+    .menu-list h3{font-size:32px;color:var(--red);margin-bottom:16px}
+    .menu-list p{border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;padding:15px 0;margin:0;font-size:14px}
+    .menu-list b{font-weight:500}.menu-list span{font-size:12px;color:#80686a;text-align:right}
+    .callout{background:var(--red);color:#fff;padding:115px 0;background-image:radial-gradient(circle at 88% 50%,rgba(255,255,255,.2) 0 6%,transparent 6.5%)}
+    .callout .eyebrow{color:#fff}.callout h2{font-size:clamp(64px,8vw,110px);margin-bottom:34px}
+    .visit{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;padding:120px 0}
+    .address{font-size:19px;line-height:1.65;margin:30px 0 16px}
+    .text-link{font-weight:700;color:var(--red);text-decoration:none}
+    .contact-panel{background:var(--red);color:#fff;padding:52px;display:flex;flex-direction:column;justify-content:center;min-height:280px}
+    .contact-panel p{font-size:12px;font-weight:700;letter-spacing:1.6px;margin:0 0 12px}
+    .contact-panel a{font-family:"Bebas Neue";font-size:clamp(38px,4vw,60px);color:#fff;text-decoration:none}
+    .contact-panel span{font-size:13px;margin-top:12px}
+    footer{background:var(--deep);color:#fff;padding:30px 0}
+    footer .wrap{display:flex;align-items:center;justify-content:space-between;gap:15px}
+    footer p{margin:0;font-size:12px;color:#ffe7e7}
+    @media(max-width:720px){
+      .wrap{width:min(100% - 36px,1160px)}.hero{min-height:680px}.nav{height:76px}
+      .menu-button{display:block}.nav-links{display:none;position:absolute;right:18px;top:65px;background:var(--deep);padding:20px;flex-direction:column;align-items:stretch;gap:18px}
+      .nav-links.open{display:flex}.hero-content{padding-top:105px}.hero-stamp{right:18px}
+      .intro,.visit{grid-template-columns:1fr;gap:35px;padding:80px 0}.section-head{display:block}.section-head>p{margin-top:16px}
+      .cards,.menu-grid{grid-template-columns:1fr}.food-card{height:270px}.menu-grid{gap:35px;margin-top:48px;padding:22px}
+      .visit{gap:45px}.contact-panel{padding:34px;min-height:210px}.callout{padding:80px 0}footer .wrap{flex-wrap:wrap}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero" id="home">
+    <nav class="nav wrap">
+      <a class="brand" href="#home"><span>CA</span> Chicken Affair</a>
+      <button class="menu-button" aria-label="Open menu">☰</button>
+      <div class="nav-links">
+        <a href="#menu">Menu</a><a href="#story">About</a><a href="#visit">Visit us</a>
+        <a class="nav-order" href="tel:+917483693377">Call to order</a>
+      </div>
+    </nav>
+    <div class="hero-content wrap">
+      <p class="eyebrow">SIRSI'S CRISPY SIDE</p>
+      <h1>Big crunch.<br><em>Bold flavour.</em></h1>
+      <p class="hero-copy">From crunchy fried chicken to loaded burgers, wraps and cool drinks — your next comfort-food craving starts here.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="tel:+917483693377">Order on call →</a>
+        <a class="button ghost" href="#menu">Explore menu</a>
+      </div>
+    </div>
+    <p class="hero-stamp">CRISPY • CHEESY • SPICY</p>
+  </header>
 
+  <main>
+    <section class="intro wrap" id="story">
+      <div><p class="eyebrow">THE AFFAIR</p><h2>Comfort food,<br>turned all the way up.</h2></div>
+      <p>Chicken Affair brings together crackly fried chicken, flavour-packed burgers, wraps, pizza and refreshing beverages. Pick your heat, make it cheesy, and enjoy.</p>
+    </section>
+
+    <section class="featured" id="menu">
+      <div class="wrap section-head"><div><p class="eyebrow">FIND YOUR FAVOURITE</p><h2>The menu</h2></div><p>Something delicious for every kind of hungry.</p></div>
+      <div class="cards wrap">
+        <article class="food-card wings"><div class="card-number">01</div><div><p>FRIED CHICKEN</p><h3>Crispy wings<br>& cruncho pops</h3><span>Classic · Cheesy · Sriracha · CA Special</span></div></article>
+        <article class="food-card burger"><div class="card-number">02</div><div><p>BURGERS</p><h3>Stacked<br>to satisfy</h3><span>Veg · Chicken · Grilled chicken burgers</span></div></article>
+        <article class="food-card wrap-card"><div class="card-number">03</div><div><p>WRAPS & MORE</p><h3>Wrapped<br>with flavour</h3><span>Paneer & chicken wraps · Pizza · Fries · Drinks</span></div></article>
+      </div>
+      <div class="wrap menu-grid">
+        <div class="menu-list"><h3>Chicken picks</h3><p><b>Classic Crispy Wings</b><span>4 pcs</span></p><p><b>Chicken Tender Strips</b><span>Choose your flavour</span></p><p><b>CA Special Chicken Burger</b><span>House favourite</span></p><p><b>Chicken Chettinad Wrap</b><span>Spiced & satisfying</span></p></div>
+        <div class="menu-list"><h3>Veg & sides</h3><p><b>Butter Paneer Burger</b><span>Rich & creamy</span></p><p><b>Paneer Peri Peri Wrap</b><span>Hot and zesty</span></p><p><b>Fries N Fly</b><span>Classic to CA Special</span></p><p><b>Cold Coffee & Mojito</b><span>Chill it down</span></p></div>
+      </div>
+    </section>
+
+    <section class="callout"><div class="wrap"><p class="eyebrow">MAKE IT A MEAL</p><h2>Come hungry.<br><em>Leave happy.</em></h2><a class="button primary" href="tel:+917483693377">Call Chicken Affair →</a></div></section>
+
+    <section class="visit wrap" id="visit">
+      <div><p class="eyebrow">DROP BY</p><h2>Find your<br>next bite.</h2><p class="address">Vimala Arcade Building,<br>Hospete Road, Sirsi,<br>Karnataka</p><a class="text-link" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Chicken+Affair+Vimala+Arcade+Building+Hospete+Road+Sirsi">Get directions ↗</a></div>
+      <div class="contact-panel"><p>WANT TO ORDER?</p><a href="tel:+917483693377">+91 74836 93377</a><span>Call us for orders and availability.</span></div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><a class="brand" href="#home"><span>CA</span> Chicken Affair</a><p>Sirsi, Karnataka</p><p>© <span id="year"></span> Chicken Affair</p></div></footer>
+
+  <script>
+    const button=document.querySelector('.menu-button');
+    const nav=document.querySelector('.nav-links');
+    button.addEventListener('click',()=>nav.classList.toggle('open'));
+    document.querySelector('#year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
+```
